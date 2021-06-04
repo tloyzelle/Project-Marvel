@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="hero">
+      <img
+        src="./assets/images/hero-banner.jpg"
+        alt="marvel character banner"
+      />
+      <h1 class="app-title">Seeing is Believing</h1>
+      <p>
+        Search for YOUR favorite Movies from YOUR favorite Heroes and Villians.
+      </p>
+    </header>
+    <main>
+      <div>
+        <div class="card">
+          <h3 class="card-header">Search By Character</h3>
+          <form id="character-form">
+            <label class="form-label">Character</label>
+            <input
+              name="character"
+              id="character"
+              type="text"
+              autofocus="true"
+              class="form-input"
+            />
+            <button type="submit" class="btn">Find Character</button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <h2>Showing Movies for: <span id="character-search-term"></span></h2>
+        <div id="hero-container" class="list-group"></div>
+      </div>
+    </main>
+  </body>
 </html>
