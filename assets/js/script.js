@@ -43,3 +43,18 @@ function getMarvelResponse() {
 }
 
 getMarvelResponse();
+
+
+//autocomplete for local storage
+var characterInput = document.querySelector("#character");
+
+renderLastRegistered();
+
+function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDivsetAttribute("class", type)
+}
+
+function renderLastRegistered() {
+    character.textContent = document.querySelector("#character").value;
+}
