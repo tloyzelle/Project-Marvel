@@ -1,7 +1,7 @@
 // OMDB connect
 var character = "spider-man";
 
-fetch("http://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie")
+fetch("https://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie")
   .then(function (response) {
     return response.json();
   })
@@ -9,7 +9,7 @@ fetch("http://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie")
     console.log(data);
   });
 
-fetch("http://www.omdbapi.com/?s=" + character + "&apikey=94e073f4")
+fetch("https://www.omdbapi.com/?s=" + character + "&apikey=94e073f4")
   .then(function (response) {
     return response.json();
   })
@@ -31,7 +31,7 @@ function getMarvelResponse() {
   // the api deals a lot in ids rather than just the strings you want to use
   var characterId = "1009718"; // wolverine (search is by character ID #, we might need to preprogram options)
 
-  var url = "http://gateway.marvel.com:80/v1/public/comics";
+  var url = "https://gateway.marvel.com:80/v1/public/comics";
 
   console.log(url);
   $.getJSON(url, {
