@@ -1,7 +1,7 @@
 // OMDB connect
 var character = "spider-man";
 
-fetch("http://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie")
+fetch("https://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie")
   .then(function (response) {
     return response.json();
   })
@@ -9,7 +9,7 @@ fetch("http://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie")
     console.log(data);
   });
 
-fetch("http://www.omdbapi.com/?s=" + character + "&apikey=94e073f4")
+fetch("https://www.omdbapi.com/?s=" + character + "&apikey=94e073f4")
   .then(function (response) {
     return response.json();
   })
@@ -51,3 +51,18 @@ function getMarvelResponse() {
 }
 
 getMarvelResponse();
+
+
+//autocomplete for local storage
+var characterInput = document.querySelector("#character");
+
+renderLastRegistered();
+
+function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDivsetAttribute("class", type)
+}
+
+function renderLastRegistered() {
+    character.textContent = document.querySelector("#character").value;
+}
