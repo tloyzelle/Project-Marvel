@@ -1,5 +1,15 @@
 // OMDB connect
-var character = ["Spider-Man", "Wolverine", "Black Panther", "Iron Man", "Deadpool", "Captain America", "Jessica Jones", "Ant-Man", "Captain Marvel", "Guardians of the Galaxy", "Luke Cage", "Black Widow", "Beast", "Black Cat", "Bruce Banner", "Charles Xavier", "Colossus", "Carnage", "Cyclops", "Daredevil"];
+var character = {SpiderMan: "Spider-Man", 
+Wolverine: "Wolverine", 
+BlackPanther: "Black Panther", 
+IronMan: "Iron Man", 
+CaptainAmerica: "Captain America", 
+BlackWidow: "Black Widow",
+Mystique: "Mystique",
+Venom: "Venom",
+Loki: "Loki",
+Thor: "Thor",
+};
 
 fetch("https://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie")
   .then(function (response) {
