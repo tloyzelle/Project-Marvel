@@ -9,14 +9,6 @@ fetch("https://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie")
     console.log(data);
   });
 
-fetch("https://www.omdbapi.com/?s=" + character + "&apikey=94e073f4")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
-
 // ------------------------------------------------------
 
 // marvel developer portal
@@ -29,7 +21,7 @@ function getMarvelResponse() {
   var hash = CryptoJS.MD5(ts + PRIV_KEY + PUBLIC_KEY).toString();
 
   // the api deals a lot in ids rather than just the strings you want to use
-  var characterId = "1009718"; // wolverine (search is by character ID #, we might need to preprogram options)
+  var characterId = "1009187"; // wolverine (search is by character ID #, we might need to preprogram options)
 
   var url = "http://gateway.marvel.com:80/v1/public/comics";
 
