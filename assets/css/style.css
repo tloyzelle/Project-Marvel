@@ -8,9 +8,8 @@
   color: white;
   text-align: center;
   font-size: 27px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
 
 img {
   display: block;
@@ -37,13 +36,17 @@ nav {
 nav a {
   text-decoration: none;
   padding: 5px 10px;
-  background-color: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+  background-color: linear-gradient(
+    270deg,
+    var(--primary) 0%,
+    var(--primary) 100%
+  );
   background-position: bottom;
-  transition: all .35s ease-in;
+  transition: all 0.35s ease-in;
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   font-size: 90%;
-  margin-left: 100px
+  margin-left: 100px;
 }
 
 nav a:hover {
@@ -56,35 +59,29 @@ nav a:last-child {
 }
 
 /*column for results*/
-.column-movies {
+#hero-contatiner {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: stretch;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.column {
+#watch-section {
+  background-color: var(--primary);
+  height: 100px;
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
 }
 
-.list-watch {
+#read-section {
   background-color: var(--primary);
   height: 100px;
-}
-
-.list-comics {
-  background-color: var(--primary);
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 /*button*/
@@ -94,17 +91,9 @@ nav a:last-child {
   font-size: 25px;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--secondary);
   color: cornsilk;
-}
-
-/*character input form*/
-.form-input {
-  border: 2px solid var(--secondary);
-  border-radius: 4px;
-  padding: 12px 20px;
-  background-color: var(--primary);
 }
 
 .col-1 {
