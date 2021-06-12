@@ -1,5 +1,5 @@
-var watchBody = document.querySelector("watch-table");
-var readBody = document.querySelector("read-table");
+var watchBody = document.querySelector("#watch-table");
+var readBody = document.querySelector("#read-table");
 
 var PUBLIC_KEY = "a6839955954077504b1dd8c4c57724b0";
 var PRIV_KEY = "798c0e386c7012b9fbe680a511afe7292fc5887e";
@@ -30,23 +30,19 @@ function searchMovie(character) {
     .then(function (data) {
       console.log(data);
       //Loop over the data to generate a table
-      for (var i = 0; i < data.length; i++) {
-        // Creating elements, tablerow, tabledata, and anchor
-        var createTableRow = document.createElement("tr");
-        var tableData = document.createElement("td");
-        var link = document.createElement("a");
-
-        // Setting the text of link and the href of the link
-        link.textContent = data[i].html_url;
-        link.href = data[i].html_url;
-
-        // Appending the tabledata and appending the tabledata to the tablerow
-        // The tablerow then gets appended to the tablebody
-        tableData.appendChild(link);
-        createTableRow.appendChild(tableData);
-        watchBody.appendChild(createTableRow);
+      for (var i = 0; i < data.Search.length; i++) {
+        var movieName = data.Search[i].Title;
+    
+        var movieEl = document.createElement('a');
+    
+        var cinemaEl = document.createElement('p');
+        cinemaEl.textContent = movieName;
+    
+        
+        movieEl.appendChild(cinemaEl);
+        watchBody.appendChild(movieEl);
       }
-    });
+});   
 }
 
 function searchMarvel(characterId) {
@@ -69,28 +65,23 @@ function searchMarvel(characterId) {
     .then(function (data) {
       console.log(data);
       //Loop over the data to generate a table
-      for (var i = 0; i < data.length; i++) {
-        // Creating elements, tablerow, tabledata, and anchor
-        var createTableRow = document.createElement("tr");
-        var tableData = document.createElement("td");
-        var link = document.createElement("a");
-
-        // Setting the text of link and the href of the link
-        link.textContent = data[i].html_url;
-        link.href = data[i].html_url;
-
-        // Appendingthe tabledata and appending the tabledata to the tablerow
-        // The tablerow then gets appended to the tablebody
-        tableData.appendChild(link);
-        createTableRow.appendChild(tableData);
-        readBody.appendChild(createTableRow);
+      for (var i = 0; i < data.data.results.length; i++) {
+        var comicName = data.data.results[i].title;
+    
+        var comicEl = document.createElement('a');
+    
+        var titleEl = document.createElement('p');
+        titleEl.textContent = comicName;
+    
+        
+        comicEl.appendChild(titleEl);
+        readBody.appendChild(comicEl);
       }
-    });
+}); 
 }
-
 capButton.on("click", function () {
   searchMarvel("1009220");
-  searchMovie("Captain America");
+  searchMovie("Captain_America");
 });
 
 wolButton.on("click", function () {
@@ -100,12 +91,12 @@ wolButton.on("click", function () {
 
 ironButton.on("click", function () {
   searchMarvel("1009368");
-  searchMovie("Iron Man");
+  searchMovie("Iron_Man");
 });
 
 pantherButton.on("click", function () {
   searchMarvel("1009187");
-  searchMovie("Black Panther");
+  searchMovie("Black_Panther");
 });
 thorButton.on("click", function () {
   searchMarvel("1009664");
@@ -113,7 +104,7 @@ thorButton.on("click", function () {
 });
 widowButton.on("click", function () {
   searchMarvel("1009189");
-  searchMovie("Black Widow");
+  searchMovie("Black_Widow");
 });
 spiderButton.on("click", function () {
   searchMarvel("1009610");
@@ -142,3 +133,4 @@ mystButton.on("click", function () {
 // venButton.character, "1011128"));
 // lokiButton.character, "1009407"));
 // mystButton.character, "1009465"));
+
