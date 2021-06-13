@@ -17,7 +17,8 @@ var venButton = $("#ven-button");
 var lokiButton = $("#loki-button");
 var mystButton = $("#myst-button");
 
-// var character = "";
+var imgEl = document.querySelectorAll(".pic");
+console.log(imgEl);
 
 function searchMovie(character) {
   var requestUrl =
@@ -30,19 +31,19 @@ function searchMovie(character) {
     .then(function (data) {
       console.log(data);
       //Loop over the data to generate a table
+      watchBody.textContent = "";
       for (var i = 0; i < data.Search.length; i++) {
         var movieName = data.Search[i].Title;
-    
-        var movieEl = document.createElement('a');
-    
-        var cinemaEl = document.createElement('p');
+
+        var movieEl = document.createElement("p");
+
+        var cinemaEl = document.createElement("p");
         cinemaEl.textContent = movieName;
-    
-        
+        cinemaEl.classList.add("movieList");
         movieEl.appendChild(cinemaEl);
         watchBody.appendChild(movieEl);
       }
-});   
+    });
 }
 
 function searchMarvel(characterId) {
@@ -65,63 +66,122 @@ function searchMarvel(characterId) {
     .then(function (data) {
       console.log(data);
       //Loop over the data to generate a table
+      readBody.textContent = "";
+      imgEl[0].setAttribute(
+        "src",
+        data.data.results[0].thumbnail.path +
+          "." +
+          data.data.results[0].thumbnail.extension
+      );
+
+      console.log(
+        data.data.results[0].thumbnail.path +
+          "." +
+          data.data.results[0].thumbnail.extension
+      );
       for (var i = 0; i < data.data.results.length; i++) {
         var comicName = data.data.results[i].title;
-    
-        var comicEl = document.createElement('a');
-    
-        var titleEl = document.createElement('p');
+
+        var comicEl = document.createElement("p");
+
+        var titleEl = document.createElement("p");
         titleEl.textContent = comicName;
-    
-        
+        titleEl.classList.add("movieList");
         comicEl.appendChild(titleEl);
         readBody.appendChild(comicEl);
       }
-}); 
+    });
 }
 capButton.on("click", function () {
   searchMarvel("1009220");
   searchMovie("Captain_America");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009220", name: "Captain_America" })
+  );
 });
 
 wolButton.on("click", function () {
   searchMarvel("1009718");
   searchMovie("Wolverine");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009718", name: "Wolverine" })
+  );
 });
 
 ironButton.on("click", function () {
   searchMarvel("1009368");
   searchMovie("Iron_Man");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009368", name: "Iron_Man" })
+  );
 });
 
 pantherButton.on("click", function () {
   searchMarvel("1009187");
   searchMovie("Black_Panther");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009187", name: "Black_Panther" })
+  );
 });
 thorButton.on("click", function () {
   searchMarvel("1009664");
   searchMovie("Thor");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009664", name: "Thor" })
+  );
 });
 widowButton.on("click", function () {
   searchMarvel("1009189");
   searchMovie("Black_Widow");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009189", name: "Black_Widow" })
+  );
 });
 spiderButton.on("click", function () {
   searchMarvel("1009610");
   searchMovie("Spiderman");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009610", name: "Spiderman" })
+  );
 });
 venButton.on("click", function () {
   searchMarvel("1011128");
   searchMovie("Venom");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1011128", name: "Venom" })
+  );
 });
 lokiButton.on("click", function () {
   searchMarvel("1009407");
   searchMovie("Loki");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009407", name: "Loki" })
+  );
 });
 mystButton.on("click", function () {
   searchMarvel("1009465");
   searchMovie("Mystique");
+  localStorage.setItem(
+    "title",
+    JSON.stringify({ id: "1009465", name: "Mystique" })
+  );
 });
+
+var save = JSON.parse(localStorage.getItem("title"));
+
+if (save) {
+  searchMarvel(save.id);
+  searchMovie(save.name);
+}
 
 // capButton. character = "1009220";
 // wolButton.character, "1009718"));
@@ -133,4 +193,3 @@ mystButton.on("click", function () {
 // venButton.character, "1011128"));
 // lokiButton.character, "1009407"));
 // mystButton.character, "1009465"));
-

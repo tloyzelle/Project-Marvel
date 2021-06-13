@@ -1,11 +1,12 @@
 :root {
-  --primary: grey;
+  --primary: rgb(231, 231, 231);
   --secondary: rgb(131, 11, 11);
+  --tertiary: rgba(62, 62, 248, 0.986);
 }
 
 * {
   background-color: rgb(201, 196, 196);
-  color: white;
+  color: blue;
   text-align: center;
   font-size: 27px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -35,6 +36,7 @@ nav {
 
 nav a {
   text-decoration: none;
+
   padding: 5px 10px;
   background-color: linear-gradient(
     270deg,
@@ -46,7 +48,7 @@ nav a {
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   font-size: 90%;
-  margin-left: 100px;
+  margin: 0 200px;
 }
 
 nav a:hover {
@@ -58,30 +60,8 @@ nav a:last-child {
   margin-right: 0;
 }
 
-/*column for results*/
-#hero-contatiner {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: stretch;
-}
-
-#watch-section {
-  background-color: var(--primary);
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-#read-section {
-  background-color: var(--primary);
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+h2 {
+  margin-left: 200px;
 }
 
 /*button*/
@@ -134,4 +114,44 @@ nav a:last-child {
 
 .col-10 {
   flex: 0 0 calc(100% * 10 / 12 - 2%);
+}
+
+/*column for results*/
+#hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+#watch-section {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  flex: 1;
+}
+
+#watch-table,
+#read-table {
+  margin-top: 10%;
+  text-align: center;
+}
+
+#read-section {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  flex: 1;
+}
+
+.comicList,
+.movieList {
+  color: black;
+}
+
+.pic {
+  height: 20%;
+  width: 20%;
 }
