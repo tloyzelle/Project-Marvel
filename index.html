@@ -20,8 +20,8 @@
     <header>
       <h1>Marvel Project</h1>
       <nav>
-        <a href="#watch-container">What to Watch</a>
-        <a href="#comic-container">What to Read</a>
+        <a href="#watch-section">What to Watch</a>
+        <a href="#read-section">What to Read</a>
       </nav>
     </header>
     <header class="hero">
@@ -49,21 +49,24 @@
           <button class="btn" id="loki-button">Loki</button>
           <button class="btn" id="myst-button">Mystique</button>
         </div>
+        <a>
+          <img class="pic" />
+        </a>
       </div>
 
-      <div class="row">
+      <div class="hero-container">
         <div class="character">
           <h2><span id="character-search-term"></span></h2>
           <div id="hero-container" class="list-group">
             <table id="watch-section">
               <th>
-                <h2>What to Watch:</h2>
+                <h2 class="section-head">What to Watch:</h2>
               </th>
               <tbody id="watch-table" class="mx-auto text-center"></tbody>
             </table>
             <table id="read-section">
               <th>
-                <h2>What to Read:</h2>
+                <h2 class="section-head">What to Read:</h2>
               </th>
               <tbody id="read-table" class="mx-auto text-center"></tbody>
             </table>
@@ -84,6 +87,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
