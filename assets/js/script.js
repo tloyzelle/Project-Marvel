@@ -22,7 +22,9 @@ console.log(imgEl);
 
 function searchMovie(character) {
   var requestUrl =
-    "https://www.omdbapi.com/?s=" + character + "&apikey=94e073f4&type=movie";
+    "https://www.omdbapi.com/?s=" +
+    character +
+    "&apikey=94e073f4&totalresults=5&type=movie";
 
   fetch(requestUrl)
     .then(function (response) {
@@ -137,7 +139,7 @@ thorButton.on("click", function () {
 });
 widowButton.on("click", function () {
   searchMarvel("1009189");
-  searchMovie("Black_Widow");
+  searchMovie("Avengers");
   localStorage.setItem(
     "title",
     JSON.stringify({ id: "1009189", name: "Black_Widow" })
@@ -152,7 +154,7 @@ spiderButton.on("click", function () {
   );
 });
 venButton.on("click", function () {
-  searchMarvel("1011128");
+  searchMarvel("1010788");
   searchMovie("Venom");
   localStorage.setItem(
     "title",
@@ -169,7 +171,7 @@ lokiButton.on("click", function () {
 });
 mystButton.on("click", function () {
   searchMarvel("1009465");
-  searchMovie("Mystique");
+  searchMovie("X_Men");
   localStorage.setItem(
     "title",
     JSON.stringify({ id: "1009465", name: "Mystique" })
@@ -190,6 +192,6 @@ if (save) {
 // thorButton.character, "1009664"));
 // widowButton.character, "1009189"));
 // spiderButton.character, "1009610"));
-// venButton.character, "1011128"));
+// venButton.character, "1010788"));
 // lokiButton.character, "1009407"));
 // mystButton.character, "1009465"));
