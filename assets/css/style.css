@@ -1,12 +1,12 @@
 :root {
-  --primary: rgb(231, 231, 231);
-  --secondary: rgb(131, 11, 11);
-  --tertiary: rgba(62, 62, 248, 0.986);
+  --primary: rgb(209, 209, 209);
+  --secondary: rgb(187, 59, 42);
+  --tertiary: rgba(16, 16, 182, 0.986);
 }
 
 * {
-  background-color: rgb(201, 196, 196);
-  color: blue;
+  background-color: rgb(63, 62, 62);
+  color: rgb(187, 59, 42);
   text-align: center;
   font-size: 27px;
   font-family:'Staatliches', cursive;
@@ -26,7 +26,7 @@ header {
 
 header h1 {
   padding: 5px 1% 5px 3%;
-  font-size: 2vw;
+  font-size: 3.5vw;
 }
 /*navigation*/
 nav {
@@ -48,8 +48,8 @@ nav a {
   transition: all 0.35s ease-in;
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
-  font-size: 90%;
-  margin: 0 200px;
+  font-size: 2vw;
+  margin: 0 260px;
 }
 
 nav a:hover {
@@ -70,6 +70,7 @@ h2 {
   color: var(--secondary);
   background-color: cornsilk;
   font-size: 25px;
+  margin: 1%;
 }
 
 .btn:hover {
@@ -149,7 +150,7 @@ h2 {
 
 .comicList,
 .movieList {
-  color: black;
+  color: rgb(156, 156, 156);
 }
 
 .pic {
