@@ -52,7 +52,7 @@ function searchMarvel(characterId) {
   var marvelUrl =
     "https://gateway.marvel.com:443/v1/public/characters/" +
     characterId +
-    "/comics?format=comic&formatType=comic&dateRange=2010-01-01%2C2020-01-01&limit=5&ts=" +
+    "/comics?format=comic&formatType=comic&dateRange=2010-01-01%2C2020-01-01&limit=10&ts=" +
     ts +
     "&apikey=" +
     PUBLIC_KEY +
