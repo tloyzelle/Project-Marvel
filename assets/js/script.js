@@ -95,6 +95,7 @@ function searchMarvel(characterId) {
     });
 }
 capButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/captain-america2.jpg");
   searchMarvel("1009220");
   searchMovie("Captain_America");
   localStorage.setItem(
@@ -104,6 +105,7 @@ capButton.on("click", function () {
 });
 
 wolButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/wolverine2.jpg");
   searchMarvel("1009718");
   searchMovie("Wolverine");
   localStorage.setItem(
@@ -113,6 +115,7 @@ wolButton.on("click", function () {
 });
 
 ironButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/iron-man2.jpg");
   searchMarvel("1009368");
   searchMovie("Iron_Man");
   localStorage.setItem(
@@ -122,6 +125,7 @@ ironButton.on("click", function () {
 });
 
 pantherButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/black-panther2.jpg");
   searchMarvel("1009187");
   searchMovie("Black_Panther");
   localStorage.setItem(
@@ -130,6 +134,7 @@ pantherButton.on("click", function () {
   );
 });
 thorButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/thor2.jpg");
   searchMarvel("1009664");
   searchMovie("Thor");
   localStorage.setItem(
@@ -138,6 +143,7 @@ thorButton.on("click", function () {
   );
 });
 widowButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/black-widow.jpg");
   searchMarvel("1009189");
   searchMovie("Avengers");
   localStorage.setItem(
@@ -146,6 +152,7 @@ widowButton.on("click", function () {
   );
 });
 spiderButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/spiderman.jpg");
   searchMarvel("1009610");
   searchMovie("Spiderman");
   localStorage.setItem(
@@ -154,6 +161,7 @@ spiderButton.on("click", function () {
   );
 });
 venButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/venom2.jpg");
   searchMarvel("1010788");
   searchMovie("Venom");
   localStorage.setItem(
@@ -162,6 +170,7 @@ venButton.on("click", function () {
   );
 });
 lokiButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/loki.jpg");
   searchMarvel("1009407");
   searchMovie("Loki");
   localStorage.setItem(
@@ -170,6 +179,7 @@ lokiButton.on("click", function () {
   );
 });
 mystButton.on("click", function () {
+  imgEl[0].setAttribute("src", "./assets/images/characters/mystique2.jpg");
   searchMarvel("1009465");
   searchMovie("X_Men");
   localStorage.setItem(
