@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Marvel Movies</title>
+  </head>
+  <body>
+    <header>
+      <h1>Marvel Project</h1>
+      <nav>
+        <a href="#watch-section">What to Watch</a>
+        <a href="#read-section">What to Read</a>
+      </nav>
+    </header>
+    <header class="hero">
+      <img
+        src="./assets/images/banner3.jpg"
+        alt="marvel character banner"
+      />
+      <h1 class="app-title">Seeing is Believing</h1>
+      <p>
+        Search for YOUR favorite Movies from YOUR favorite Heroes and Villians!
+      </p>
+    </header>
+    <main>
+      <div>
+        <div class="card">
+          <h3 class="card-header">Search By Character</h3>
+          <button class="btn" id="cap-button">Captain America</button>  
+          <button class="btn" id="iron-button">Iron Man</button>
+          <button class="btn" id="panther-button">Black Panther</button>
+          <button class="btn" id="thor-button">Thor</button>
+          <button class="btn" id="widow-button">Black Widow</button>
+          <button class="btn" id="spider-button">Spiderman</button>
+          <button class="btn" id="wol-button">Wolverine</button>
+          <button class="btn" id="ven-button">Venom</button>
+          <button class="btn" id="loki-button">Loki</button>
+          <button class="btn" id="myst-button">Mystique</button>
+        </div>
+        <a>
+          <img class="pic" />
+        </a>
+      </div>
+
+      
+      
+      
+        
+
+
+      <div class="hero-container">
+        <div class="character">
+          <h2><span id="character-search-term"></span></h2>
+          <div id="hero-container" class="list-group">
+            <table id="watch-section">
+              <th>
+                <h2 class="section-head">What to Watch:</h2>
+              </th>
+              <tbody id="watch-table" class="mx-auto text-center"></tbody>
+            </table>
+            <table id="read-section">
+              <th>
+                <h2 class="section-head">What to Read:</h2>
+              </th>
+              <tbody id="read-table" class="mx-auto text-center"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.3.0/crypto-js.min.js"
+      integrity="sha512-e2c+O0PvytekkdJLc82DHfa6La8TPKzO2/DFA97YeHTbiDCwKMzloupJM6Llf/W4K19+N21gFyplVkvzL4pZxQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

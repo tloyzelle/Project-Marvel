@@ -1,0 +1,167 @@
+:root {
+  --primary: rgb(209, 209, 209);
+  --secondary: rgb(187, 59, 42);
+  --tertiary: rgba(16, 16, 182, 0.986);
+}
+
+* {
+  background-color: rgb(63, 62, 62);
+  color: rgb(187, 59, 42);
+  text-align: center;
+  font-size: 27px;
+  font-family:'Staatliches', cursive;
+
+}
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*header*/
+header {
+  padding: 5px 5px;
+}
+
+header h1 {
+  padding: 5px 1% 5px 3%;
+  font-size: 3.5vw;
+}
+/*navigation*/
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+
+  padding: 5px 10px;
+  background-color: linear-gradient(
+    270deg,
+    var(--primary) 0%,
+    var(--primary) 100%
+  );
+  background-position: bottom;
+  transition: all 0.35s ease-in;
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  font-size: 2vw;
+  margin: 0 260px;
+}
+
+nav a:hover {
+  background-size: 100% 100%;
+  color: var(--secondary);
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+h2 {
+  margin-left: 200px;
+}
+
+/*button*/
+.btn {
+  color: var(--secondary);
+  background-color: cornsilk;
+  font-size: 25px;
+  margin: 1%;
+}
+
+.btn:hover {
+  background-color: var(--secondary);
+  color: cornsilk;
+}
+
+.col-1 {
+  flex: 0 0 calc(100% * 1 / 12 - 2%);
+}
+
+.col-2 {
+  flex: 0 0 calc(100% * 2 / 12 - 2%);
+}
+
+.col-3 {
+  flex: 0 0 calc(100% * 3 / 12 - 2%);
+}
+
+.col-4 {
+  flex: 0 0 calc(100% * 4 / 12 - 2%);
+}
+
+.col-5 {
+  flex: 0 0 calc(100% * 5 / 12 - 2%);
+}
+
+.col-6 {
+  flex: 0 0 calc(100% * 6 / 12 - 2%);
+}
+
+.col-7 {
+  flex: 0 0 calc(100% * 7 / 12 - 2%);
+}
+
+.col-8 {
+  flex: 0 0 calc(100% * 8 / 12 - 2%);
+}
+
+.col-9 {
+  flex: 0 0 calc(100% * 9 / 12 - 2%);
+}
+
+.col-10 {
+  flex: 0 0 calc(100% * 10 / 12 - 2%);
+}
+
+/*column for results*/
+#hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+#watch-section {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  flex: 1;
+}
+
+#watch-table,
+#read-table {
+  margin-top: 10%;
+  text-align: center;
+}
+
+#read-section {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  flex: 1;
+}
+
+.comicList,
+.movieList {
+  color: rgb(156, 156, 156);
+}
+
+.pic {
+  height: 30%;
+  width: 30%;
+  
+}
+
+.dropdown{
+  
+
+}
+
