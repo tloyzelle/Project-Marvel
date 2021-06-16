@@ -33,6 +33,7 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  
 }
 
 nav a {
@@ -71,11 +72,13 @@ h2 {
   background-color: cornsilk;
   font-size: 25px;
   margin: 1%;
+  box-shadow: 3px 3px 25px #db3232
 }
 
 .btn:hover {
   background-color: var(--secondary);
   color: cornsilk;
+  box-shadow: 3px 3px 25px #ece5e5
 }
 
 .col-1 {
